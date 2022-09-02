@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+}
+
+.main-wrapper {
+  display: flex;
+  padding: 20px;
+  margin: 10px;
+
+  .toggler {
+    width: 7px;
+    height: 160px;
+    background-color: rgb(93, 161, 200);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+
+    &.toggler-mobile {
+      height: 240px;
+    }
+  }
+  .card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: white;
+    max-width: 800px;
+    height: 160px;
+
+    &.card-mobile {
+      height: 240px;
+    }
+
+    .top-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-weight: bold;
+
+      &.top-wrapper-mobile {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .scheduled {
+        color: rgb(209, 166, 85);
+        font-weight: bold;
+        background-color: rgb(250, 231, 196);
+        padding: 3px 5px;
+        border-radius: 5px;
+        width: fit-content;
+      }
+    }
+
+    .bottom-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      &.bottom-wrapper-mobile {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .left-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        &.left-wrapper-mobile {
+          margin-bottom: 10px;
+        }
+
+        .date-wrapper,
+        .project-wrapper,
+        .location-wrapper {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+        }
+      }
+
+      .right-wrapper {
+        display: flex;
+        align-self: flex-end;
+        .call-wrapper {
+          border: 1px solid rgb(204, 195, 195);
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          padding: 3px 10px;
+          font-weight: 600;
+          cursor: pointer;
+          margin-right: 10px;
+
+          .zoom {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+          }
+        }
+
+        .avatar-group {
+          display: flex;
+          align-items: center;
+
+          .MuiAvatar-root {
+            width: 25px;
+            height: 25px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+
+  .img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
+}
